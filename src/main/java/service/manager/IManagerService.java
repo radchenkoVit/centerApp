@@ -16,7 +16,7 @@ public interface IManagerService {
     Client findClient(String email);
     Client findClientByPhone(String phone);
     Client removeClient(String email);
-    Client removeClient(UUID uuid);
+    Client removeClient(Integer id);
 
     //operation with application
     VisaApplication findApplication(UUID id);
