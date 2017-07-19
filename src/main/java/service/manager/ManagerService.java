@@ -15,6 +15,10 @@ public class ManagerService implements IManagerService {
 
     }
 
+    public boolean addClient(Client client) {
+        return dao.addClient(client);
+    }
+
     public boolean addClient(String name, String lastName, String email, String phoneNumber) {
         Client client = new Client();
         client.setName(name);
@@ -38,8 +42,12 @@ public class ManagerService implements IManagerService {
         return null;
     }
 
-    public Client removeClient() {
-        return null;
+    public Client removeClient(String email) {
+        return dao.removeClient(email);
+    }
+
+    public Client removeClient(UUID uuid) {
+        return dao.removeClient(uuid);
     }
 
     public VisaApplication findApplication(UUID id) {
