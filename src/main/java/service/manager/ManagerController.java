@@ -6,6 +6,9 @@ import java.util.UUID;
 
 public class ManagerController {
 
+    //TODO: where we should put some validation things
+    //TODO: where to store sql queries to get data from DB
+
     //@Autowired TODO: made by sprein IOC --> dependency injection
     private ManagerService managerService;
 
@@ -32,6 +35,7 @@ public class ManagerController {
         return "redirect:/index"; // TODO don't know what is it
     }
 
+    //TODO: think which of REST will be better for deleting in different ways
     //@RequestMapping(value = "/delete/client/by/email/{clientEmail}", method = RequestMethod.POST)
     public String deleteClientByEmail(/*@PathVariable("contactId")*/ String email){
 
