@@ -1,23 +1,13 @@
 package system.model;
 
-import java.util.UUID;
-
 public class VisaApplication {
-    private UUID id;
+    private Long id;
     private VisaType type;
     private String notes;
-    private Client client;
 
     public VisaApplication(){
     }
 
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     public VisaType getType() {
         return type;
@@ -27,14 +17,6 @@ public class VisaApplication {
         this.type = type;
     }
 
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -42,11 +24,14 @@ public class VisaApplication {
 
         VisaApplication that = (VisaApplication) o;
 
-        return id != null ? id.equals(that.id) : that.id == null;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        return type == that.type;
     }
 
     @Override
     public int hashCode() {
-        return id != null ? id.hashCode() : 0;
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (type != null ? type.hashCode() : 0);
+        return result;
     }
 }
