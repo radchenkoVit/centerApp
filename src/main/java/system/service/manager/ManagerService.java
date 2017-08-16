@@ -1,5 +1,6 @@
 package system.service.manager;
 
+import system.model.Client;
 import system.model.VisaApplication;
 import system.model.VisaType;
 
@@ -12,6 +13,11 @@ public class ManagerService implements IManagerService {
 
     public void login(String email, String password) {
 
+    }
+
+    @Override
+    public boolean addClient(Client client) {
+        return false;
     }
 
     public boolean addClient(String name, String lastName, String email, String phoneNumber) {
@@ -34,6 +40,16 @@ public class ManagerService implements IManagerService {
     }
 
     public Client findClientByPhone(String phone){
+        return null;
+    }
+
+    @Override
+    public Client removeClient(String email) {
+        return null;
+    }
+
+    @Override
+    public Client removeClient(Integer id) {
         return null;
     }
 
