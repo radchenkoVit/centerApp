@@ -1,6 +1,6 @@
-package service.client;
+package system.service.client;
 
-public interface IClientService {
+public interface ClientService {
     void login(String name, String password);
     void getVisaStatus(String id);
 }

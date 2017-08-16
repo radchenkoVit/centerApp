@@ -1,6 +1,6 @@
-package service.admin;
+package system.service.admin;
 
-public interface IAdminService {
+public interface AdminService {
     void login(String email, String password);
     void addManager();
     void removeManager();

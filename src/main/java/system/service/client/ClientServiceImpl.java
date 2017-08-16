@@ -1,6 +1,6 @@
-package service.client;
+package system.service.client;
 
-public class ClientServiceImpl implements IClientService {
+public class ClientServiceImpl implements ClientService {
     public void login(String name, String password) {
 
     }

@@ -1,6 +1,6 @@
-package service.admin;
+package system.service.admin;
 
-public class AdminServiceImpl implements IAdminService {
+public class AdminServiceImpl implements AdminService {
     public void login(String email, String password) {
 
     }

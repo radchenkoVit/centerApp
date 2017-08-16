@@ -1,8 +1,8 @@
-package service.manager;
+package system.service.manager;
 
-import model.Client;
-import model.VisaApplication;
-import model.VisaType;
+import system.model.Client;
+import system.model.VisaApplication;
+import system.model.VisaType;
 
 import java.util.UUID;
 
